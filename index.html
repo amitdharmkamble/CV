@@ -3,9 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resume</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hidden { display: none; }
+        #profile-photo {
+            height: 120px;
+            width: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    </style>
 </head>
-<body>
-    
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto py-6 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <!-- Profile Photo -->
+                <img id="profile-photo" src="https://via.placeholder.com/120" alt="Profile Photo">
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-900">John Doe</h1>
+                    <button id="toggleContact" class="mt-2 text-blue-500 underline">Show Contact Details</button>
+                    <p id="contactDetails" class="hidden text-lg text-gray-600">Full-Stack Developer | john.doe@example.com | (123) 456-7890</p>
+                </div>
+            </div>
+            <div>
+                <button id="toggleTheme" class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg">Toggle Dark Mode</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-8 px-4">
+        <!-- Profile Section -->
+        <section class="bg-white p-6 rounded-lg shadow mb-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Profile</h2>
+            <p class="text-gray-600">A highly skilled full-stack developer with over 5 years of experience in building web applications, ensuring responsive design, and delivering optimized performance. Proficient in a range of programming languages, libraries, and frameworks.</p>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="bg-white p-6 rounded-lg shadow mb-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Experience</h2>
+
+            <!-- Job 1 -->
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-800">Senior Full-Stack Developer</h3>
+                <p class="text-gray-600 italic">Tech Company | January 2021 - Present</p>
+                <ul class="list-disc ml-6 mt-2 text-gray-600">
+                    <li>Led the development of a web platform, improving performance by 30% through code optimization and database restructuring.</li>
+                    <li>Collaborated with cross-functional teams to design and implement new features.</li>
+                    <li>Mentored junior developers and conducted code reviews to ensure quality standards.</li>
+                </ul>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-800">Full-Stack Developer</h3>
+                <p class="text-gray-600 italic">Another Tech Company | May 2018 - December 2020</p>
+                <ul class="list-disc ml-6 mt-2 text-gray-600">
+                    <li>Developed and maintained a customer management system using React and Node.js.</li>
+                    <li>Implemented CI/CD pipelines to streamline development processes and reduce deployment time by 20%.</li>
+                    <li>Worked closely with UI/UX teams to create responsive and accessible designs.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills Section with Filter -->
+        <section class="bg-white p-6 rounded-lg shadow mb-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Skills</h2>
+            <div class="flex mb-4">
+                <button class="filterBtn bg-gray-200 text-gray-700 px-4 py-2 mr-2 rounded-lg" data-category="all">All</button>
+                <button class="filterBtn bg-gray-200 text-gray-700 px-4 py-2 mr-2 rounded-lg" data-category="programming">Programming</button>
+                <button class="filterBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg" data-category="cloud">Cloud Platforms</button>
+            </div>
+            <ul class="list-disc ml-6 text-gray-600">
+                <li class="skill-item programming">JavaScript, Python, PHP</li>
+                <li class="skill-item programming">React, Node.js, Express</li>
+                <li class="skill-item cloud">AWS, Heroku, Azure</li>
+                <li class="skill-item cloud">Google Cloud</li>
+                <li class="skill-item programming">Version Control: Git, GitHub</li>
+            </ul>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="bg-white p-6 rounded-lg shadow mb-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Certifications</h2>
+            <ul class="list-disc ml-6 text-gray-600">
+                <li>AWS Certified Solutions Architect</li>
+                <li>Google Cloud Professional Cloud Architect</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white shadow mt-8 py-6">
+        <div class="container mx-auto text-center text-gray-600">
+            <p>&copy; 2024 John Doe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactions -->
+    <script>
+        // Toggle Contact Details
+        document.getElementById('toggleContact').addEventListener('click', function () {
+            const contactDetails = document.getElementById('contactDetails');
+            if (contactDetails.classList.contains('hidden')) {
+                contactDetails.classList.remove('hidden');
+                this.textContent = 'Hide Contact Details';
+            } else {
+                contactDetails.classList.add('hidden');
+                this.textContent = 'Show Contact Details';
+            }
+        });
+
+        // Toggle Dark Mode
+        document.getElementById('toggleTheme').addEventListener('click', function () {
+            document.body.classList.toggle('bg-gray-900');
+            document.body.classList.toggle('text-white');
+            document.body.classList.toggle('bg-gray-100');
+            document.body.classList.toggle('text-gray-900');
+        });
+
+        // Filter Skills
+        document.querySelectorAll('.filterBtn').forEach(button => {
+            button.addEventListener('click', function () {
+                const category = this.getAttribute('data-category');
+                const allSkills = document.querySelectorAll('.skill-item');
+
+                allSkills.forEach(skill => {
+                    if (category === 'all' || skill.classList.contains(category)) {
+                        skill.style.display = 'list-item';
+                    } else {
+                        skill.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
