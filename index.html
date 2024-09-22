@@ -27,10 +27,8 @@
                 <img id="profile-photo" src="https://via.placeholder.com/120" alt="Profile Photo">
                 <div>
                     <h1 class="text-3xl font-bold text-gray-900">Amit Dharmkamble</h1>
-                    <button id="toggleContact" class="mt-2 text-blue-500 underline">Show Contact Details</button>
-                    <p id="contactDetails" class="hidden text-lg text-gray-600">Software Developer | amitdharmkamble302@gmail.com | 9552256558</p>
+                    <p id="contactDetails" class="text-lg text-gray-600">Software Developer | amitdharmkamble302@gmail.com | 9552256558</p>
                 </div>
-            </div>
         </div>
     </header>
 
@@ -108,26 +106,6 @@
 
     <!-- JavaScript for interactions -->
     <script>
-        // Toggle Contact Details
-        document.getElementById('toggleContact').addEventListener('click', function () {
-            const contactDetails = document.getElementById('contactDetails');
-            if (contactDetails.classList.contains('hidden')) {
-                contactDetails.classList.remove('hidden');
-                this.textContent = 'Hide Contact Details';
-            } else {
-                contactDetails.classList.add('hidden');
-                this.textContent = 'Show Contact Details';
-            }
-        });
-
-        // Toggle Dark Mode
-        document.getElementById('toggleTheme').addEventListener('click', function () {
-            document.body.classList.toggle('bg-gray-900');
-            document.body.classList.toggle('text-white');
-            document.body.classList.toggle('bg-gray-100');
-            document.body.classList.toggle('text-gray-900');
-        });
-
         // Filter Skills
         document.querySelectorAll('.filterBtn').forEach(button => {
             button.addEventListener('click', function () {
