@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,16 @@
     <title>Amit Dharmkamble Resume</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Card hover effect */
+        .hover-card:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
+
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
 
     <!-- Header Section -->
@@ -16,21 +26,26 @@
             <div class="flex items-center space-x-4">
                 <div>
                     <h1 class="text-2xl font-bold text-gray-900 text-wrap">Amit Dharmkamble</h1>
-                    <p id="contactDetails" class="text-lg text-gray-600 text-wrap">Software Developer | amitdharmkamble302@gmail.com | 9552256558</p>
+                    <p id="contactDetails" class="text-lg text-gray-600 text-wrap">
+                        Software Developer | amitdharmkamble302@gmail.com | 9552256558
+                    </p>
                 </div>
+            </div>
         </div>
     </header>
 
     <!-- Main Content -->
     <main class="container mx-auto mt-8 px-4">
         <!-- Profile Section -->
-        <section class="bg-white p-6 rounded-lg shadow mb-6">
+        <section class="bg-white p-6 rounded-lg shadow mb-6 hover-card">
             <h2 class="text-2xl font-bold text-gray-800 mb-4">Profile</h2>
-            <p class="text-gray-600">A highly skilled full-stack developer with over 2.5 years of experience in building web applications, ensuring responsive design, and delivering optimized performance. Proficient in a range of programming languages, libraries, and frameworks.</p>
+            <p class="text-gray-600">
+                A highly skilled full-stack developer with over 2.5 years of experience in building web applications, ensuring responsive design, and delivering optimized performance. Proficient in a range of programming languages, libraries, and frameworks.
+            </p>
         </section>
 
         <!-- Experience Section -->
-        <section class="bg-white p-6 rounded-lg shadow mb-6">
+        <section class="bg-white p-6 rounded-lg shadow mb-6 hover-card">
             <h2 class="text-2xl font-bold text-gray-800 mb-4">Experience</h2>
 
             <!-- Job 1 -->
@@ -50,26 +65,26 @@
                 <h3 class="text-xl font-semibold text-gray-800">Software Developer</h3>
                 <p class="text-gray-600 italic">Expert Business Solutions | September 2022 - October 2023</p>
                 <ul class="list-disc ml-6 mt-2 text-gray-600">
-                    <li>Domain : Enteprise Resource Planning.</li>
+                    <li>Domain : Enteprise Resource Planning</li>
                     <li>Nature of work : Programming, Production support, Query optimizations, Creating reports, analytics, forms, modules.</li>
-                    <li>Technologies : C#, Dot net framework 4.7.2, Redis, Azure SQL Database, Redis.</li>
+                    <li>Technologies : C#, Dot net framework 4.7.2, Redis, Azure SQL Database, Redis</li>
                 </ul>
             </div>
 
             <!-- Job 3 -->
             <div class="mb-6">
                 <h3 class="text-xl font-semibold text-gray-800">Dot Net Developer</h3>
-                <p class="text-gray-600 italic">I Knowledge Factrory | December 2023 - Present</p>
+                <p class="text-gray-600 italic">I Knowledge Factory | December 2023 - Present</p>
                 <ul class="list-disc ml-6 mt-2 text-gray-600">
-                    <li>Domain : Edcuation, Matrimony, Billing, Human Resource</li>
+                    <li>Domain : Education, Matrimony, Billing, Human Resource</li>
                     <li>Nature of work : Rewriting legacy code in latest technologies, Creating modules, Securing web applications.</li>
-                    <li>Technologies : Dot net core 6/8, React, Tailwind CSS, Web API.</li>
+                    <li>Technologies : Dot net core 6/8, React, Tailwind CSS, Web API</li>
                 </ul>
             </div>
         </section>
 
         <!-- Skills Section with Filter -->
-        <section class="bg-white p-6 rounded-lg shadow mb-6">
+        <section class="bg-white p-6 rounded-lg shadow mb-6 hover-card">
             <h2 class="text-2xl font-bold text-gray-800 mb-4">Skills</h2>
             <div class="flex mb-4">
                 <button class="filterBtn bg-gray-200 text-gray-700 px-4 py-2 mr-2 rounded-lg" data-category="all">All</button>
@@ -113,4 +128,5 @@
     </script>
 
 </body>
+
 </html>
