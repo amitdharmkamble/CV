@@ -6,27 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Amit Dharmkamble Resume</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Card hover effect */
-        .hover-card:hover {
-            transform: translateY(-10px);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
 
     <!-- Header Section -->
-    <header class="bg-white shadow">
-        <div class="container mx-auto py-6 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <div class="flex items-center space-x-4">
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
                 <div>
-                    <h1 class="text-2xl font-bold text-gray-900 text-wrap">Amit Dharmkamble</h1>
-                    <p id="contactDetails" class="text-lg text-gray-600 text-wrap">
+                    <h1 class="name">Amit Dharmkamble</h1>
+                    <p id="contactDetails" class="contact-details">
                         Software Developer | amitdharmkamble302@gmail.com | 9552256558
                     </p>
                 </div>
@@ -35,11 +26,11 @@
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto mt-8 px-4">
+    <main class="main">
         <!-- Profile Section -->
-        <section class="bg-white p-6 rounded-lg shadow mb-6 hover-card">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Profile</h2>
-            <p class="text-gray-600">
+        <section class="card hover-card">
+            <h2 class="section-title">Profile</h2>
+            <p class="section-content">
                 A skilled full-stack developer with 3 years of experience in building responsive, high-performance web applications.
                 <br>
                 Proficient in a range of programming languages, libraries, and frameworks.
@@ -47,87 +38,62 @@
         </section>
 
         <!-- Experience Section -->
-        <section class="bg-white p-6 rounded-lg shadow mb-6 hover-card">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Experience</h2>
+        <section class="card ">
+            <h2 class="section-title">Experience</h2>
 
             <!-- Job 1 -->
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-800 hover-card">Software Developer Trainee</h3>
-                <p class="text-gray-600 italic">Vinsys IT Services Private Limited | July 2021 - August 2022</p>
-                <ul class="list-disc ml-6 mt-2 text-gray-600 hover-card">
-                    <li>Domain : Education, Assessments</li>
-                    <li>Nature of work : Code, L1 Support, Creating modules, Monitoring live exams.</li>
-                    <li>Technologies : Java Struts 1.2, Springboot, MySql, jQuery, Javascript, Hibernate</li>
-                    <li>Securing web application</li>
+            <div class="card hover-card">
+                <h3 class="job-title ">Software Developer Trainee</h3>
+                <p class="job-duration">Vinsys IT Services Private Limited | July 2021 - August 2022</p>
+                <ul class="job-details">
+                    <li>Domain: Education, Assessments</li>
+                    <li>Nature of work: Code, L1 Support, Creating modules, Monitoring live exams.</li>
+                    <li>Technologies: Java Struts 1.2, Springboot, MySql, jQuery, Javascript, Hibernate</li>
+                    <li>Securing web applications</li>
                 </ul>
             </div>
 
             <!-- Job 2 -->
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-800 hover-card">Software Developer</h3>
-                <p class="text-gray-600 italic">Expert Business Solutions | September 2022 - October 2023</p>
-                <ul class="list-disc ml-6 mt-2 text-gray-600 hover-card">
-                    <li>Domain : Enteprise Resource Planning</li>
-                    <li>Nature of work : Programming, Production support, Query optimizations, Creating reports, analytics, forms, modules.</li>
-                    <li>Technologies : C#, Dot net framework 4.7.2, Redis, Azure SQL Database, Redis</li>
+            <div class="card hover-card">
+                <h3 class="job-title ">Software Developer</h3>
+                <p class="job-duration">Expert Business Solutions | September 2022 - October 2023</p>
+                <ul class="job-details">
+                    <li>Domain: Enterprise Resource Planning</li>
+                    <li>Nature of work: Programming, Production support, Query optimizations, Creating reports, analytics, forms, modules.</li>
+                    <li>Technologies: C#, Dot net framework 4.7.2, Redis, Azure SQL Database, Redis</li>
                 </ul>
             </div>
 
             <!-- Job 3 -->
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-800 hover-card">Dot Net Developer</h3>
-                <p class="text-gray-600 italic">I Knowledge Factory | December 2023 - Present</p>
-                <ul class="list-disc ml-6 mt-2 text-gray-600 hover-card">
-                    <li>Domain : Education, Matrimony, Billing, Human Resource</li>
-                    <li>Nature of work : Rewriting legacy code in latest technologies, Creating modules, Securing web applications.</li>
-                    <li>Technologies : Dot net core 6/8, Angular 18, Tailwind CSS, REST API</li>
+            <div class="card hover-card">
+                <h3 class="job-title ">Dot Net Developer</h3>
+                <p class="job-duration">I Knowledge Factory | December 2023 - Present</p>
+                <ul class="job-details">
+                    <li>Domain: Education, Matrimony, Billing, Human Resource</li>
+                    <li>Nature of work: Rewriting legacy code in latest technologies, Creating modules, Securing web applications.</li>
+                    <li>Technologies: Dot net core 6/8, Angular 18, Tailwind CSS, REST API</li>
                 </ul>
             </div>
         </section>
 
         <!-- Skills Section with Filter -->
-        <section class="bg-white p-6 rounded-lg shadow mb-6 hover-card">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4 hover-card">Skills</h2>
-            <div class="flex mb-4">
-                <button class="filterBtn bg-gray-200 text-gray-700 px-4 py-2 mr-2 rounded-lg" data-category="all">All</button>
-                <button class="filterBtn bg-gray-200 text-gray-700 px-4 py-2 mr-2 rounded-lg" data-category="programming">Programming</button>
-                <button class="filterBtn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg" data-category="cloud">Cloud Platforms</button>
-            </div>
-            <ul class="list-disc ml-6 text-gray-600 hover-card">
-                <li class="skill-item programming hover-card">JavaScript, Python, Java, C#</li>
+        <section class="card ">
+            <h2 class="section-title ">Skills</h2>
+            <ul class="skills-list">
+                <li class="skill-item programming ">JavaScript, Python, Java, C#</li>
                 <li class="skill-item programming">Angular, Node.js, Tailwindcss, Jquery</li>
                 <li class="skill-item cloud">Azure</li>
                 <li class="skill-item programming">Version Control: Git, GitHub, Gitlab</li>
             </ul>
         </section>
-
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white shadow mt-8 py-6">
-        <div class="container mx-auto text-center text-gray-600">
-            <p>&copy; 2024 Amit Dharmkamble. All rights reserved.</p>
-        </div>
+    <footer class="footer">
     </footer>
 
-    <!-- JavaScript for interactions -->
-    <script>
-        // Filter Skills
-        document.querySelectorAll('.filterBtn').forEach(button => {
-            button.addEventListener('click', function () {
-                const category = this.getAttribute('data-category');
-                const allSkills = document.querySelectorAll('.skill-item');
+    <script src="script.js"></script>
 
-                allSkills.forEach(skill => {
-                    if (category === 'all' || skill.classList.contains(category)) {
-                        skill.style.display = 'list-item';
-                    } else {
-                        skill.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
 
 </body>
 

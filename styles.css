@@ -1,0 +1,134 @@
+/* Base Styles */
+body {
+    background-color: #f7fafc;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a202c;
+    word-wrap: break-word;
+}
+
+.contact-details {
+    font-size: 1.125rem;
+    color: #4a5568;
+    word-wrap: break-word;
+}
+
+.main {
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+/* Card Styles */
+.card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+.section-content {
+    color: #4a5568;
+}
+
+/* Job Details */
+.job {
+    margin-bottom: 1.5rem;
+}
+
+.job-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.job-duration {
+    font-style: italic;
+    color: #4a5568;
+}
+
+.job-details {
+    margin-left: 1.5rem;
+    color: #4a5568;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.filter-btn {
+    background-color: #edf2f7;
+    color: #4a5568;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #e2e8f0;
+}
+
+/* Skills Section */
+.skills-list {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+
+.skill-item {
+    color: #4a5568;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #ffffff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem 0;
+    text-align: center;
+    color: #4a5568;
+}
+
+/* Hover Effect */
+.hover-card:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
